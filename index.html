@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Quasarzone Blocker 개인정보 처리방침</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, "Malgun Gothic", sans-serif; line-height: 1.8; }
+    body { max-width: 820px; margin: 0 auto; padding: 36px 22px 64px; }
+    h1 { font-size: clamp(24px, 5vw, 34px); line-height: 1.4; }
+    h2 { margin-top: 32px; font-size: 20px; }
+    a { color: #ba6200; }
+    .date { opacity: .7; }
+    .intro { padding: 16px 20px; border: 1px solid #8886; border-radius: 12px; }
+    li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Quasarzone Blocker<br>개인정보 처리방침</h1>
+  <p class="date">시행일: 2026년 10월 29일 · 대상 버전: 1.0.7</p>
+  <p class="intro">Quasarzone Blocker는 퀘이사존에서 사용자가 이미 차단한 회원의 글·댓글·답글 멘션을 숨기고 관련 댓글 수를 보정하는 비공식 Chrome 확장 프로그램입니다. 이 방침은 확장 프로그램이 브라우저 안에서 처리하는 정보와 같은 사이트에 보내는 요청을 설명합니다.</p>
+
+  <h2>1. 처리하는 정보와 목적</h2>
+  <ul>
+    <li><strong>닉네임과 차단 목록:</strong> 퀘이사존 차단 목록에서 닉네임을 읽고 게시글·댓글 작성자 및 시스템 답글 멘션과 비교해 차단된 회원의 표시를 숨깁니다.</li>
+    <li><strong>웹사이트 콘텐츠:</strong> 기능에 필요한 게시물 목록·댓글 HTML, 글·댓글 식별자, 댓글 수를 읽어 화면을 변경합니다. 차단 메모는 기능에 이용하거나 별도 저장하지 않습니다.</li>
+    <li><strong>현재 사이트 URL과 상호작용:</strong> 현재 퀘이사존 페이지 및 조회할 글·댓글 페이지 주소를 사용하고, 사이트에서 차단 상태가 바뀌었을 때 최신 목록을 확인합니다. 브라우저의 전체 방문 기록을 조회·저장하지 않습니다.</li>
+    <li><strong>옵션 값:</strong> 목록 댓글 수 자동 보정의 켜짐·꺼짐 값 하나를 기기에 저장해 사용자의 선택을 유지합니다.</li>
+    <li><strong>작업 통계:</strong> 보정 소요 시간, 추가 요청 수, 대상·확인·실패 글 수를 현재 탭에서 계산해 팝업에 보여 줍니다.</li>
+  </ul>
+  <p>이 정보는 위 기능을 제공하기 위해서만 사용합니다. 사용자 데이터를 광고, 추적, 신용 평가, 대출 판단 또는 별도 사용자 프로파일 작성에 이용하지 않습니다.</p>
+
+  <h2>2. 기기 내 보관과 삭제</h2>
+  <p>닉네임, 차단 목록, 조회한 글·댓글 결과, 기능에 필요한 URL과 작업 통계는 현재 탭의 메모리에서만 사용하며 영구 저장하지 않습니다. 해당 페이지를 닫으면 메모리의 정보가 해제됩니다. 확장 프로그램이 기기에 영구 저장하는 정보는 <code>chrome.storage.local</code>의 목록 보정 옵션 값 하나뿐입니다. 확장 프로그램을 삭제하면 확장 프로그램의 저장 데이터도 삭제됩니다.</p>
+
+  <h2>3. 네트워크 요청과 제3자 제공</h2>
+  <p>차단 목록 확인, 목록 댓글 수 계산 및 차단 해제된 댓글 복원을 위해 로그인된 퀘이사존의 같은 출처 HTTPS 페이지를 요청할 수 있습니다. 브라우저는 기존 사이트 로그인 세션을 사용합니다. 이 과정에서 퀘이사존은 일반 웹 요청과 마찬가지로 요청 URL, 접속 정보와 기존 세션 정보를 수신할 수 있으며, 해당 사이트의 처리는 퀘이사존 자체 정책을 따릅니다.</p>
+  <p>확장 프로그램은 비밀번호나 원시 쿠키 값을 직접 읽지 않습니다. 개발자가 운영하는 서버, 분석·광고 서비스 또는 퀘이사존 이외의 서비스로 처리 정보를 보내지 않습니다. 사용자 데이터를 판매하거나 다른 목적으로 제3자에게 제공하지 않습니다. 다른 열린 퀘이사존 탭에는 확장 프로그램 내부의 차단 목록 갱신 신호만 전달하며 닉네임 목록이나 댓글 본문을 보내지 않습니다.</p>
+
+  <h2>4. 권한과 사용자 제어</h2>
+  <p>콘텐츠 스크립트는 <code>https://quasarzone.com/*</code>와 <code>https://www.quasarzone.com/*</code>에서만 동작합니다. <code>storage</code> 권한은 옵션 값 저장에 사용합니다. 팝업에서 목록 댓글 수 보정을 끄면 진행 중인 목록 보정 요청을 중단하고 목록 숫자를 원래대로 되돌립니다. 차단 목록 자체는 퀘이사존에서 관리합니다. 확장 프로그램을 사용하지 않으려면 Chrome에서 비활성화하거나 삭제할 수 있습니다.</p>
+
+  <h2>5. Chrome 웹 스토어 사용자 데이터 정책 준수</h2>
+  <p>Quasarzone Blocker의 사용자 데이터 사용은 <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome 웹 스토어 사용자 데이터 정책</a>과 제한적 사용(Limited Use) 요건을 따릅니다. 데이터 처리는 공개한 단일 목적에 필요한 범위로 제한하며, 개인화 광고나 공개하지 않은 분석을 위해 이용·전달하지 않습니다. 개발자는 확장 프로그램을 통해 사용자의 처리 정보를 수집하거나 열람하는 서버를 운영하지 않습니다.</p>
+
+  <h2>6. 변경 및 문의</h2>
+  <p>기능이나 정보 처리 방식이 변경되면 이 방침과 시행일을 갱신하고 필요한 경우 확장 프로그램 및 스토어 등록 정보에 변경 내용을 알립니다. 문의는 Chrome 웹 스토어의 Quasarzone Blocker 등록 페이지에 표시되는 개발자 연락처를 이용해 주세요. 제공자는 해당 등록 페이지에 표시된 개발자입니다.</p>
+  <p>Quasarzone Blocker는 퀘이사존과 제휴 관계가 없는 비공식 확장 프로그램입니다.</p>
+</main>
+</body>
+</html>
